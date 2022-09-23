@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 2</title>
+  </head>
+  <body>
+    <img src="Disneymovies.jpg" alt="Cover of the Lion King" />
+    <br />
+    <a href="cortej19@matc.edu"> Contact Juliana</a>
+
+    <h1>My favorite Disney Movies</h1>
+    <!--Simple Table-->
+    <table id="simple-table" border="1" cellspacing="0">
+      <tr>
+        <th>Movie</th>
+        <th>URL</th>
+      </tr>
+      <tr>
+        <td>The Lion King</td>
+        <td>
+          <a href="https://www.imdb.com/title/tt0110357/"> The Lion king</a>
+          IMDb page
+        </td>
+      </tr>
+      <tr>
+        <td>Encanto</td>
+        <td>
+          <a href="https://www.imdb.com/title/tt2953050/?ref_=fn_al_tt_1">
+            Encanto IMDb page</a
+          >
+        </td>
+      </tr>
+    </table>
+    <br />
+    <!--Complex table-->
+    <table id="complex-table" border="1" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Favorite Character</th>
+          <th scope="colum">Age</th>
+          <th scope="colum">Origin</th>
+          <th scope="colum">siblings</th>
+          <th scope="colum">Favorite Animal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">Simba</td>
+          <td>20</td>
+          <td>Pride Rock</td>
+          <td>0</td>
+          <td>hiena</td>
+        </tr>
+        <tr>
+          <td scope="row">Mirable Madrigal</td>
+          <td>15</td>
+          <td>Colombia</td>
+          <td>2</td>
+          <td>Puma</td>
+        </tr>
+        <tr>
+          <td scope="row">Antonio Madrigal</td>
+          <td>5</td>
+          <td>Colombia</td>
+          <td>2</td>
+          <td>Tucan</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td colspan="5">&copy; Walt Disney</td>
+      </tfoot>
+    </table>
+  </body>
+</html>
