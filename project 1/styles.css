@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    background-color: rgb(247, 255,247);
+    font-family:'Mulish',sans-serif, Arial,Helvetica ;
+
+}
+
+li, a, button {
+    font-family: 'Mulish',sans-serif, Arial, Helvetica;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(47,48,97);
+    margin: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30 10%;
+}
+
+.nav_links {
+    list-style: none;
+}
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+
+}
+.nav_links li a:hover {
+
+    color: gray;
+
+}
+button {
+    padding: 9px 25px;
+    background-color: rgb(247, 255, 247);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(247, 255, 247, 0.9);
+}
+ h1 {
+    font-family: 'Mulish', sans-serif, Arial,Helvetica; 
+    color: rgb(52,52,52);
+    font-size: xx-large;
+    padding-left: 4%;
+    text-shadow: 2px 2px black ;
+
+    
+    
+}
+h2 { 
+    color: rgb(47, 48, 97) ;
+    font-size: larger;
+    font-weight: bold;
+    margin: 20px;
+    text-decoration: underline;
+}
+
+h3 {
+    color: rgb(47, 48, 97);
+    font-size: large;
+    margin: 20px;
+}
+
+p {
+    text-align: justify;
+    color:rgb(52, 52, 52);
+    margin: 20px;
+
+}
+
+section {
+    border: dashed rgb(47, 48, 97);
+    
+
+}
