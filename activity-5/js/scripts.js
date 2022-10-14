@@ -5,11 +5,11 @@
 
     /* Package data and constructor objects **/
 
-    // Package data array simulated data source, such as JSON or database recordset.
+    // Package data array simulated data source, such as JSON or database record set.
 
     var data = [
     {
-        name: 'emmet',
+        name:'emmet',
         description: 'Emmet is the number one code snippet tool.',
         author: 'emmetio',
         url:'https://atom.io/packages/emmet',
@@ -42,14 +42,14 @@
         this.selector = data.selector;
 
         this.getFormattedDownloads = function(){
-            return this.downloads.toLocalString();
+            return this.downloads.toLocaleString();
         };
         this.getFormattedStars = function(){
-            return this.stars.toLocalString();
+            return this.stars.toLocaleString();
         };
 
     }
-/** Utility Fuctions */
+/** Utility Functions */
 
 // Return today´s date, formatted
 var getTodaysDate = function(){
@@ -57,7 +57,7 @@ var getTodaysDate = function(){
     return today.toDateString();
 }
 
-//Returns DOM elemenent by id
+//Returns DOM element by id
 var getEl = function(id){
     return document.getElementById(id);
 };
@@ -68,7 +68,7 @@ var writePackageInfo = function(package) {
     // Get reference to DOM elements
     var selector = package.selector,
         nameEl = getEl(selector + '-name'),
-        descEl = getEl(selector + 'description'),
+        descEl = getEl(selector + '-description'),
         authEl = getEl(selector + '-author'),
         downloadsEl = getEl(selector + '-downloads'),
         starsEl = getEl(selector + '-stars');
@@ -78,12 +78,19 @@ var writePackageInfo = function(package) {
     descEl.textContent = package.description;
     authEl.textContent = package.author;
     downloadsEl.textContent = package.getFormattedDownloads();
-    starsEl.textContent = package.getFormattedDownloads();
+    starsEl.textContent = package.getFormattedStars();
 };
 
 // Write Date
  var dateEl = getEl('date');
  dateEl.textContent = getTodaysDate(); 
+ // write package data one _by -one
 
+
+ var emmet = new Package(data[0]);
+ writePackageInfo(emmet);
  
+ var beautify = new Package(data[1]);
+ writePackageInfo(beautify);
+
 }());
