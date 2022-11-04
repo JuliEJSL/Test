@@ -49,3 +49,40 @@ function addTask(event){
     inputEl.value = ''
     }
 }
+
+//Click handler to complete task
+function completeTask (event){
+    // Get the task element
+    var taskEl = event.target;
+    var id = taskEl.id;
+// Find corresponding task in the array and update status
+for (var i =0, i< tasks.length; i++) {
+    if(tasks[i].id === id){
+        tasks[i].status = taskStatus.completed;
+        break;
+    }
+}
+
+// Move task element from active list to complete list
+taskEl.remove();
+document.getElementById('completed-list').appendChild(taskEl);
+}
+
+// Handler to automatically add task to list
+function clickButton(event){
+    if(event.keyCode === 13){
+        document.getElementById('add-task').click();
+
+    }
+}
+
+// Initializes app
+
+function init (){
+    document.getElementById('add-task').onclick = addTask;
+
+    document.getElementById('active-list').onclick = completeTask;
+
+    document.getElementById('input-task').onkeypress = clickButton;
+}
+init();
