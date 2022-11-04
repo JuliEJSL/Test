@@ -14,3 +14,38 @@ function Task(id, name,status){
     this.status = status;
 }
 
+// Creates new task element and adds it to the DOM
+function addTaskElement (task) {
+    // creates elements
+    var listEl = document.getElementById('active-list');
+    var taskEl = document.createElement('li');
+    var  textEl = document.createTextNode(task.name);
+
+// set attributes
+ taskEl.setAttribute('id',task.id);
+
+ //add text to task element
+ taskEl.appendChild(textEl);
+
+ //add task element to list
+ listEl.appendChild(taskEl);
+
+}
+
+// Click handler to add a new task
+
+function addTask(event){
+    var inputEl = document.getElementById('input-task');
+    if(inputEl.value != ''){
+        var id = 'item' + tasks.length;
+    //Create a new task
+    var task = new Task(id,inputEl.value, taskStatus.active);
+    tasks.push(task);
+
+    // Add task to DOM
+    addTaskElement(task);
+
+    // Reset input
+    inputEl.value = ''
+    }
+}
